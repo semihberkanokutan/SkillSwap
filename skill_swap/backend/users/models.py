@@ -3,8 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class CustomUser(AbstractUser):
-    skills = models.ManyToManyField('Skill')
     bio = models.TextField(null=True, blank=True)
     email = models.EmailField(null=False)
-    username = models.CharField(null=False)
+    username = models.CharField(max_length=150, unique=True)
     
