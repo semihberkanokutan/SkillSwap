@@ -6,5 +6,5 @@ class CustomUser(AbstractUser):
     skills = models.ManyToManyField('Skill')
     bio = models.TextField(null=True, blank=True)
     email = models.EmailField(null=False)
-    username = models.TextField(null=False)
+    username = models.CharField(null=False)
     
